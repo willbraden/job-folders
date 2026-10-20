@@ -1,6 +1,7 @@
 # skills
 
-Workspace for my Claude skills.
+Workspace for my Claude skills. See [skills/README.md](skills/README.md) for the
+index, and `skills/skill-maker` for how skills are built and checked.
 
 Each skill lives in its own folder under `skills/`:
 
