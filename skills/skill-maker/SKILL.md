@@ -111,7 +111,8 @@ bash skills/skill-maker/scripts/new_skill.sh <skill-name>                 # leaf
 bash skills/skill-maker/scripts/new_skill.sh --orchestrator <skill-name>  # orchestrator
 ```
 
-The script refuses to overwrite an existing folder.
+Add `--into <dir>` to create the skill in a different skills folder, such as
+`demo/skills`. The script refuses to overwrite an existing folder.
 
 ### 4. Write it
 
@@ -141,7 +142,7 @@ instead.
 Run the deterministic checks:
 
 ```
-python3 skills/skill-maker/scripts/check_skills.py
+python3 skills/skill-maker/scripts/check_skills.py            # or pass another skills folder
 ```
 
 They confirm that frontmatter is valid, the name matches the folder, no

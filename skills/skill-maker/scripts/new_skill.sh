@@ -1,20 +1,25 @@
 #!/usr/bin/env bash
-# Scaffold a new skill folder: bash new_skill.sh [--orchestrator] <skill-name>
+# Scaffold a new skill folder:
+#   bash new_skill.sh [--orchestrator] [--into <skills-dir>] <skill-name>
+# Without --into, the skill is created next to skill-maker.
 set -euo pipefail
 
 kind=leaf
-if [[ "${1:-}" == "--orchestrator" ]]; then
-  kind=orchestrator
-  shift
-fi
+skills_dir="$(cd "$(dirname "$0")/../.." && pwd)"
+while [[ "${1:-}" == --* ]]; do
+  case "$1" in
+    --orchestrator) kind=orchestrator; shift ;;
+    --into) skills_dir="$(cd "${2:?--into needs a directory}" && pwd)"; shift 2 ;;
+    *) echo "unknown option: $1" >&2; exit 1 ;;
+  esac
+done
 
 name="${1:-}"
 if [[ ! "$name" =~ ^[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
-  echo "usage: $0 [--orchestrator] <skill-name>  (lowercase kebab-case)" >&2
+  echo "usage: $0 [--orchestrator] [--into <skills-dir>] <skill-name>  (lowercase kebab-case)" >&2
   exit 1
 fi
 
-skills_dir="$(cd "$(dirname "$0")/../.." && pwd)"
 dir="$skills_dir/$name"
 if [[ -e "$dir" ]]; then
   echo "error: $dir already exists" >&2

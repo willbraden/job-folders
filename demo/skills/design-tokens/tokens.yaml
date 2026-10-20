@@ -1,0 +1,54 @@
+# Published design tokens. This file is the only place these values appear.
+# Dimensions are unitless: px on web, pt on iOS, dp on Android.
+
+color:
+  surface:
+    default: "#FFFFFF"
+    hover: "#F7F8FA"
+    pressed: "#EDEFF2"
+    selected: "#EEF4FF"
+    selected-hover: "#E2ECFF"
+    disabled: "#F5F5F5"
+  border:
+    default: "#C7CBD1"
+    hover: "#8A9099"
+    selected: "#2F6FEB"
+    disabled: "#E3E5E8"
+  text:
+    primary: "#1A1D21"
+    secondary: "#5B616B"
+    disabled: "#A3A8B0"
+    inverse: "#FFFFFF"
+  icon:
+    default: "#5B616B"
+    selected: "#2F6FEB"
+    disabled: "#A3A8B0"
+  accent:
+    default: "#2F6FEB"
+    hover: "#1F57C7"
+  focus:
+    ring: "#2F6FEB"
+  transparent: "#00000000"
+
+space:
+  050: 2
+  200: 8
+  300: 12
+  400: 16
+
+radius:
+  100: 4
+  200: 8
+
+border-width:
+  100: 1
+  200: 2
+
+size:
+  icon:
+    md: 24
+  indicator: 20
+
+type:
+  heading-sm: "600 16/24"
+  body-sm: "400 14/20"

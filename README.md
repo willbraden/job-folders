@@ -12,3 +12,7 @@ skills/
     scripts/        # optional helper scripts
     references/     # optional docs the skill loads on demand
 ```
+
+For a worked example of the structure (an orchestrator, an owner skill, a
+component with web and mobile files, and an audit script), see
+[demo/](demo/README.md).

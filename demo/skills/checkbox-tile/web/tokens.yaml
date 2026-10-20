@@ -1,0 +1,67 @@
+# Web token cells for checkbox-tile.
+# Every value is a token path from design-tokens/tokens.yaml. No raw values.
+# A cell matches a published token exactly or the audit fails.
+
+layout:
+  container-padding: space.400
+  container-gap: space.300
+  container-radius: radius.200
+  container-border-width: border-width.100
+  selected-border-width: border-width.200
+  icon-size: size.icon.md
+  indicator-size: size.indicator
+  indicator-radius: radius.100
+  heading-type: type.heading-sm
+  description-type: type.body-sm
+
+focus:
+  ring-color: color.focus.ring
+  ring-width: border-width.200
+  ring-offset: space.050
+
+states:
+  default:
+    container-background: color.surface.default
+    container-border: color.border.default
+    icon-color: color.icon.default
+    heading-color: color.text.primary
+    description-color: color.text.secondary
+    indicator-fill: color.surface.default
+    indicator-border: color.border.default
+    indicator-check: color.transparent
+  hover:
+    container-background: color.surface.hover
+    container-border: color.border.hover
+    icon-color: color.icon.default
+    heading-color: color.text.primary
+    description-color: color.text.secondary
+    indicator-fill: color.surface.default
+    indicator-border: color.border.hover
+    indicator-check: color.transparent
+  selected:
+    container-background: color.surface.selected
+    container-border: color.border.selected
+    icon-color: color.icon.selected
+    heading-color: color.text.primary
+    description-color: color.text.secondary
+    indicator-fill: color.accent.default
+    indicator-border: color.accent.default
+    indicator-check: color.text.inverse
+  selected-hover:
+    container-background: color.surface.selected-hover
+    container-border: color.accent.hover
+    icon-color: color.icon.selected
+    heading-color: color.text.primary
+    description-color: color.text.secondary
+    indicator-fill: color.accent.hover
+    indicator-border: color.accent.hover
+    indicator-check: color.text.inverse
+  disabled:
+    container-background: color.surface.disabled
+    container-border: color.border.disabled
+    icon-color: color.icon.disabled
+    heading-color: color.text.disabled
+    description-color: color.text.disabled
+    indicator-fill: color.surface.disabled
+    indicator-border: color.border.disabled
+    indicator-check: color.transparent
